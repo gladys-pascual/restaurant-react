@@ -1,38 +1,134 @@
-.App {
+*{
+  font-family: 'Itim', cursive;
+}
+
+p{
+  font-size: 20px;
+}
+
+h1 {
   text-align: center;
+  font-size: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.FoodList{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heart-icon{
+  width:35px;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heart-icon img {
+  width: 100%;
+}
+
+.FoodCard {
+  border: 5px dashed pink;
+  margin: 10px 15% 50px 15%;
+
+}
+
+.FoodContainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.FoodImage{
+  width: 250px;
+}
+
+.FoodImage img {
+  width: 100%;
+  padding: 8px;
+}
+
+.Price {
+  padding-right: 20px;
+}
+
+.Image-Name-Description{
+  display: flex;
+}
+
+.Name-Description{
+  width: 500px;
+  padding-left: 40px;
+}
+/* Media Queries */
+@media (max-width:1300px){
+  .FoodCard {
+    margin: 10px 10% 50px 10%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Name-Description{
+    width: 450px;
   }
+}
+
+@media (max-width:1050px){
+  .FoodCard {
+    margin: 10px 5% 50px 5%;
+  }
+
+  .Name-Description{
+    width: 400px;
+  }
+}
+
+@media (max-width:950px){
+  .Name-Description{
+    width: 300px;
+  }
+}
+
+@media (max-width:800px){
+  .Name-Description{
+    width: 200px;
+  }
+}
+
+
+@media (max-width:650px){
+  .FoodContainer{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .Image-Name-Description{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Heart-Price{
+    display:flex;
+    justify-content: center;
+  }
+
+  .Price{
+    order: -1;
+  }
+
+  .Name-Description{
+    text-align: center;
+    width: 250px;
+    padding-left: 0px;
+  }
+
+  .FoodCard{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+  }
+
+  .OuterFoodCard{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
