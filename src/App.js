@@ -1,9 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import RestaurantName from './components/RestaurantName';
-import FoodList from './components/FoodList';
-import data from './data'
+import React from "react";
+import "./App.css";
+import RestaurantName from "./components/RestaurantName";
+import FoodList from "./components/FoodList";
+import data from "./data";
 
 const App = () => {
   return (
@@ -12,6 +11,6 @@ const App = () => {
       <FoodList {...data} />
     </div>
   );
-}
+};
 
 export default App;
